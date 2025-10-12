@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BBAN</title>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9299057125771745"
-     crossorigin="anonymous"></script>
   
   <!-- 
     - favicon
@@ -165,11 +158,11 @@
 
   <section class="property" id="property">
 
-        <div class="container">
+     <div class="container">
 
-          <h2 class="h2 section-title">Featured Items</h2>
+      <h2 class="h2 section-title">Featured Items</h2>
 
-            <li>
+        <li>
               <div class="property-card">
 
                 <figure class="card-banner">
@@ -178,7 +171,7 @@
                     <img src="/assets/product images/bban1-Black/bbanblack1-Front.jpg" alt="BBan 1 Hoodie" class="w-100">
                   </a>
 
-                  <div class="card-badge green" id="BBan1hoodiestock"></a></div>
+                  <div class="card-badge green" id="BBan1hoodiestock">Loading Stock...</div>
 
                 </figure>
 
@@ -198,15 +191,18 @@
                 </div>
 
               </div>
-            </li>
+        </li>
+      </div>
+  </section>
 
-
-            <script>
-        fetch('\assets\txtfiles\BBan 1 hoodie stock.txt')  // bban 1 hoodie stocks
-            .then(response => response.text())
-            .then(text => {
-                document.getElementById('BBan1hoodiestock').textContent = text;
-            })
-            .catch(error => console.error('Error fetching text file:', error));
-    </script>
-</html>
+<script>
+    fetch('C:\BBAN\assets\txtfiles\BBan 1 hoodie stock.txt') // Replace 'your_file.txt' with the actual path to your text file
+      .then(response => response.text()) // Parse the response as plain text
+      .then(data => {
+        document.getElementById('BBan1hoodiestock').textContent = data; // Update the div's content
+      })
+      .catch(error => {
+        console.error('Error fetching the file:', error); // Handle potential errors
+      });
+</script>
+</body>
