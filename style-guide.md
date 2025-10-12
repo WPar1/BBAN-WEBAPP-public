@@ -1,4 +1,5 @@
 # Essential Stuff
+i dont update this so it IS not currect, feel free to update this ig
 
 ## Html import links
 

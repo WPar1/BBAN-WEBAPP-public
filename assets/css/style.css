@@ -168,6 +168,19 @@ button, a { transition: var(--transition); }
 
 .h3 > a { color: inherit; }
 
+.btnn {
+  position: relative;
+  background: var(--orange-soda);
+  color: var(--white);
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-5);
+  text-transform: var(--text-transform, capitalize);
+  border: 1px solid var(--orange-soda);
+  padding: 10px 20px;
+  z-index: 1;
+  width: 250px;
+}
+
 .btn {
   position: relative;
   background: var(--orange-soda);
